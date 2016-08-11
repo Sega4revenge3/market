@@ -12,7 +12,7 @@ $fun = new Functions();
 // json response array
 $response = array("error" => FALSE);
 
-if (!isset($_POST['email'])) {
+if (isset($_POST['email'])) {
 	$email = 'sega4revenge@gmail.com';
 
       echo  $fun -> resetPasswordRequest($email);

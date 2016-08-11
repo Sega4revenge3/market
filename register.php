@@ -28,6 +28,7 @@ if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['passwor
         $response["error_msg"] = "User already existed with " . $email;
         echo json_encode($response);
     } else {
+
         // create a new user
         $user = $db->storeUser($username, $email, $password,$phone,$address,$area,$firebaseid);
       

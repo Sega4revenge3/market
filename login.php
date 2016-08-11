@@ -18,8 +18,12 @@ if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['firebas
     $password = $_POST['password'];
     $firebaseid = $_POST['firebaseid'];
     // get the user by email and password
-    $user = $db->getUserByEmailAndPassword($email, $password, $firebaseid);
-} else {
+    $user = $db->getUserByEmailAndPassword($email, $password,$firebaseid);
+}
+else {
+    echo $_POST['email'];
+    echo $_POST['password'];
+    echo $_POST['firebaseid'];
     // required post params is missing
     $response["error"] = TRUE;
     $response["error_msg"] = "Required parameters email or password is missing!";
